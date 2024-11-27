@@ -30,5 +30,7 @@ ENV PORT=3000 METRICS_PORT=3100
 
 EXPOSE ${PORT} ${METRICS_PORT}
 
-CMD node main
+ENTRYPOINT SERVER_PORT=${SERVER_PORT} java -jar target/dovbear-0.0.1-SNAPSHOT.jar
+
+#CMD node main
 #NAME comes from the pom.xml artifact id - version .jar
